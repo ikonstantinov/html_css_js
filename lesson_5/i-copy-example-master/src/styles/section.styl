@@ -1,0 +1,525 @@
+@import'./mixins.styl';
+@import'./variables.styl';
+
+$sectionIosBG = #fafafa;
+$headerFontSize=3.5rem;
+$headerPadding=5rem;
+$headerFontSize=2.5rem;
+$headerDescriptionFontSize=1.6875rem;
+$headerLargeFontSize= 3.5rem
+$headerSmallFontSize=1.3125rem;
+$sectionMargin=1rem;
+$sectionCroppedMaxWidth=1350px;
+$textColorSecond=#888;
+$linkColorDefault=#4d96d6;
+$sectionContentMargin=2rem;
+$sectionTwoColumnsPaddingBetween=1rem;
+$availabilityColor=#888;
+$mainSectionPaddingTop=4.375rem;
+$linkColor=#0070c9;
+
+.section
+	margin $sectionMargin auto
+	box-sizing border-box
+	position relative
+	&-availability
+		color $availabilityColor
+		padding-top 0.75rem
+		> span
+			padding 0 1rem
+	&-description
+		text-align center
+		&_content
+			width 80%
+			margin 0 auto
+	&-header
+		font-size $headerFontSize
+		&_small
+			font-size $headerDescriptionFontSize
+		&_description
+			font-size $headerSmallFontSize
+		&_large
+			font-size $headerLargeFontSize
+	&-link
+		display inline-block
+		padding-top 0.75rem
+		color $linkColor
+		font-size $headerSmallFontSize
+		position relative
+		text-decoration none
+		&:after
+			content '>'
+			position absolute
+			right 0
+			top 50%
+			transform translate(150%, -17%)
+			font-size 1rem
+	&-content
+		box-sizing border-box
+		margin 1rem auto
+		position relative
+		overflow hidden
+		//max-width 1250px
+		+xs-mobile()
+			max-width 328px
+		+mobile()
+			max-width 328px
+		+mobile-landscape()
+			max-width 736px
+		+tablet()
+			max-width 736px
+		+laptop()
+			width 736px
+		+desktop()
+			max-width 980px
+	&-cropped
+		+xs-mobile()
+			margin $sectionContentMargin auto
+		+mobile()
+			margin $sectionContentMargin auto
+		+tablet()
+			margin $sectionContentMargin auto
+		+laptop()
+			margin $sectionContentMargin auto
+		+desktop()
+			margin $sectionContentMargin auto
+			max-width 1350px
+	&-img
+		background-repeat no-repeat
+		background-position center
+		background-size contain
+
+	&-iphone-x
+		background #f7f7f7
+		.section-content
+			padding-top $mainSectionPaddingTop
+			margin 0 auto
+		.section-img
+			margin 4rem auto
+			+xs-mobile()
+				background-image url(../assets/images/iphone_x_small_2x.jpg)
+				background-size 336px 71px
+				width 336px
+				height 71px
+			+mobile()
+				background-image url(../assets/images/iphone_x_small_2x.jpg)
+				background-size 336px 71px
+				width 336px
+				height 71px
+			+tablet()
+				background-image url(../assets/images/iphone_x_medium_2x.jpg)
+				background-size 649px 136px
+				width 649px
+				height 136px
+			+laptop()
+				background-image url(../assets/images/iphone_x_medium_2x.jpg)
+				background-size 649px 136px
+				width 649px
+				height 136px
+			+desktop()
+				background-image url(../assets/images/iphone_x_large_2x.jpg)
+				width 981px
+				height 206px
+				background-size 981px 206px
+
+	&-iphone-8
+		background-color #f9f0eb
+		.section-content
+			padding-top $mainSectionPaddingTop
+			margin 0 auto
+		.section-img
+			margin 0 auto
+			+xs-mobile()
+				background-image url(../assets/images/iphone_8_small_2x.jpg)
+				background-size 321px 229px
+				width 321px
+				height 229px
+			+mobile()
+				background-image url(../assets/images/iphone_8_small_2x.jpg)
+				background-size 321px 229px
+				width 321px
+				height 229px
+			+tablet()
+				background-image url(../assets/images/iphone_8_medium_2x.jpg)
+				background-size 476px 383px
+				width 476px
+				height 383px
+			+laptop()
+				background-image url(../assets/images/iphone_8_medium_2x.jpg)
+				background-size 476px 383px
+				width 476px
+				height 383px
+			+desktop()
+				background-image url(../assets/images/iphone_8_large_2x.jpg)
+				width 611px
+				height 498px
+				background-size 611px 498px
+
+	&-compare
+		background-color #fafafa
+		margin-top 2rem
+		.section-description
+			text-align left
+			margin initial
+			+laptop()
+				display flex
+				align-items stretch
+				flex-direction column
+				justify-content center
+			+desktop()
+				display flex
+				align-items stretch
+				flex-direction column
+				justify-content center
+		.section-img
+			margin 0 auto
+			margin-top 2rem
+			align-self flex-end
+			+xs-mobile()
+				background-image url(../assets/images/compare_small_2x.jpg)
+				background-size 303px 275px
+				width 303px
+				height 275px
+			+mobile()
+				background-image url(../assets/images/compare_small_2x.jpg)
+				background-size 303px 275px
+				width 303px
+				height 275px
+			+tablet()
+				background-image url(../assets/images/compare_medium_2x.jpg)
+				background-size 457px 349px
+				width 457px
+				height 349px
+			+laptop()
+				background-image url(../assets/images/compare_medium_2x.jpg)
+				background-size 476px 349px
+				width 476px
+				height 349px
+			+desktop()
+				display inline-flex
+				background-image url(../assets/images/compare_large_2x.jpg)
+				width 587px
+				height 449px
+				background-size 587px 449px
+
+	&-ios
+		background-color #fafafa
+		margin-top 2rem
+		justify-content center
+		//+xs-mobile()
+		//+mobile()
+		//+laptop()
+		+desktop()
+			height 700px
+			justify-content flex-start
+		.section-description
+			+laptop()
+				display flex
+				align-items stretch
+				flex-direction column
+				justify-content center
+			+desktop()
+				display flex
+				align-items stretch
+				flex-direction column
+				justify-content center
+		.section-img
+			margin 0 auto
+			margin-top 2rem
+			align-self flex-end
+			+xs-mobile()
+				background-image url(../assets/images/ios_small_2x.jpg)
+				background-size 322px 291px
+				width 322px
+				height 291px
+			+mobile()
+				background-image url(../assets/images/ios_small_2x.jpg)
+				background-size 322px 291px
+				width 322px
+				height 291px
+			+tablet()
+				background-image url(../assets/images/ios_medium_2x.jpg)
+				background-size 577px 484px
+				width 577px
+				height 484px
+			+laptop()
+				background-image url(../assets/images/ios_medium_2x.jpg)
+				background-size 577px 484px
+				width 577px
+				height 484px
+			+desktop()
+				position absolute
+				right -10%
+				top 50%
+				transform translateY(-50%)
+				display inline-flex
+				background-image url(../assets/images/ios_large_2x.jpg)
+				width 828px
+				height 527px
+				background-size 828px 527px
+				margin-top 0
+
+	&-two-column
+		//min-height 600px
+		.subsection
+			height 550px
+			background #fafafa
+			+laptop()
+				height 400px
+		> *
+			&:nth-child(odd)
+				padding-right $sectionTwoColumnsPaddingBetween
+				+xs-mobile()
+					padding 0
+				+mobile()
+					padding 0
+				+tablet()
+					padding 0
+				+mobile-landscape()
+					flex-basis 100%
+
+			&:nth-child(even)
+				padding-left $sectionTwoColumnsPaddingBetween
+				+xs-mobile()
+					padding 0
+				+mobile()
+					padding 0
+				+tablet()
+					padding 0
+				+mobile-landscape()
+					flex-basis 100%
+		.section-description
+			text-align center
+			position relative
+			z-index 1
+			padding-top 4rem
+		.section-airpods
+			position relative
+			.section-img
+				margin-top 2rem
+				align-self flex-end
+				+xs-mobile()
+					background-image url(../assets/images/airpods_small_2x.jpg)
+					background-size cover
+					width 100%
+					height 50%
+				+mobile()
+					background-image url(../assets/images/airpods_small_2x.jpg)
+					background-size cover
+					width 100%
+					height 50%
+				+mobile-landscape()
+					height 90%
+					position absolute
+					bottom 0
+					background-size cover
+					width 100%
+				+tablet()
+					background-image url(../assets/images/airpods_medium_2x.jpg)
+					background-size cover
+					width 100%
+					height 80%
+					position absolute
+					bottom 0
+				+laptop()
+					background-image url(../assets/images/accessories_medium_2x.jpg)
+					width 100%
+					height 60%
+					position absolute
+					bottom 0
+					background-position top
+				+laptop()
+					background-image url(../assets/images/airpods_medium_2x.jpg)
+					background-size cover
+					width 100%
+					height 50%
+					background-position top
+				+desktop()
+					position absolute
+					bottom 0
+					display inline-flex
+					background-image url(../assets/images/airpods_large_2x.jpg)
+					background-size cover
+					width calc(100% - 1rem)
+					height 60%
+					margin-top 0
+					background-position top
+		.section-accessories
+			position relative
+			+xs-mobile()
+				margin-top 2rem
+			+mobile()
+				margin-top 2rem
+			+tablet()
+				margin-top 2rem
+			.section-img
+				margin-top 2rem
+				align-self flex-end
+				background-size cover
+				+xs-mobile()
+					background-image url(../assets/images/accessories_small_2x.jpg)
+					width 100%
+					height 60%
+				+mobile()
+					background-image url(../assets/images/accessories_small_2x.jpg)
+					width 100%
+					height 60%
+				+mobile-landscape()
+					height 100%
+					position absolute
+					bottom 0
+					width 100%
+				+tablet()
+					background-image url(../assets/images/accessories_medium_2x.jpg)
+					position absolute
+					bottom 0
+					width 100%
+					height 100%
+				+tablet-landscape()
+					position absolute
+					bottom 0
+					width 100%
+					background-position top
+				+laptop()
+					background-image url(../assets/images/accessories_medium_2x.jpg)
+					width 100%
+					height 75%
+					position absolute
+					bottom 0
+					background-position top
+				+desktop()
+					position absolute
+					bottom 0
+					background-image url(../assets/images/accessories_large_2x.jpg)
+					width 100%
+					height 80%
+					z-index 0
+					margin-top 0
+					background-position top
+	&-how-to-shoot
+		background-size cover
+		background-repeat no-repeat
+		background-position center
+		+xs-mobile()
+			background-image url(../assets/images/howtoshoot_small_2x.jpg)
+			height 570px
+		+mobile()
+			background-image url(../assets/images/howtoshoot_small_2x.jpg)
+			height 570px
+		+tablet()
+			background-image url(../assets/images/howtoshoot_medium_2x.jpg)
+			height 550px
+		+laptop()
+			background-image url(../assets/images/howtoshoot_medium_2x.jpg)
+			height 570px
+		+desktop()
+			background-image url(../assets/images/howtoshoot_large_2x.jpg)
+			height 800px
+		.section-description
+			position absolute
+			top 50%
+			width 100%
+			transform translateY(-50%)
+			color #FFF
+	&-apple-pay
+		.subsection
+			background #fafafa
+			height 800px
+			position relative
+			.section-description
+				width 95%
+				margin 0 auto
+		.section-img
+			align-self flex-end
+			background-size cover
+			width 100%
+			margin-top 2rem
+			+xs-mobile()
+				background-image url(../assets/images/apple_pay_small_2x.jpg)
+				height 50%
+				position absolute
+				bottom 0
+			+mobile()
+				background-image url(../assets/images/apple_pay_small_2x.jpg)
+				height 50%
+				position absolute
+				bottom 0
+			+tablet()
+				background-image url(../assets/images/apple_pay_medium_2x.jpg)
+				height 50%
+				position absolute
+				bottom 0
+			+laptop()
+				background-image url(../assets/images/apple_pay_medium_2x.jpg)
+				height 40%
+				position absolute
+				bottom 0
+			+desktop()
+				background-image url(../assets/images/apple_pay_large_2x.jpg)
+				height 50%
+				position absolute
+				bottom 0
+	&-icloud
+		+xs-mobile()
+			margin-top 2rem
+		+mobile()
+			margin-top 2rem
+		+tablet()
+			margin-top 2rem
+		.subsection
+			height 800px
+			position relative
+			.section-description
+				width 95%
+				margin 0 auto
+		.section-img
+			margin-top 2rem
+			align-self flex-end
+			background-size cover
+			width 100%
+			+xs-mobile()
+				background-image url(../assets/images/icloud_small_2x.jpg)
+				height 21%
+				position absolute
+				top 60%
+				width 95%
+				left 50%
+				transform translate(-50%)
+			+mobile()
+				background-image url(../assets/images/icloud_small_2x.jpg)
+				height 21%
+				position absolute
+				top 60%
+				width 95%
+				left 50%
+				transform translate(-50%)
+			+mobile-landscape()
+				height 43%
+				top 50%
+				width 95%
+				left 50%
+				transform translate(-50%)
+			+tablet()
+				background-image url(../assets/images/icloud_medium_2x.jpg)
+				height 41%
+				position absolute
+				top 50%
+				width 95%
+				left 50%
+				transform translate(-50%)
+			+laptop()
+				background-image url(../assets/images/icloud_medium_2x.jpg)
+				height 21%
+				width 90%
+				position absolute
+				bottom 5%
+				left 50%
+				transform translate(-50%)
+			+desktop()
+				background-image url(../assets/images/icloud_large_2x.jpg)
+				height 41%
+				position absolute
+				top 50%
+				width 95%
+				left 50%
+				transform translate(-50%)

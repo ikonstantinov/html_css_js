@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blocks</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 7px;
+        }
+        .color_button{
+            display: none;
+        }
+        .blue_button{
+            color: blue;
+            text-decoration: underline;
+        }
+        .blue{
+            display: none;
+            background-color: blue;
+            border-radius: 2px;
+            padding: 3px;
+            color: white;
+        }
+        .red_button{
+            color: red;
+            text-decoration: underline;
+        }
+        .red{
+            display: none;
+            background-color: red;
+            border-radius: 2px;
+            padding: 3px;
+            color: white;
+        }
+        .green_button{
+            color: green;
+            text-decoration: underline;
+        }
+        .green{
+            display: none;
+            background-color: green;
+            border-radius: 2px;
+            padding: 3px;
+            color: white;
+        }
+        #blue:checked ~ .blue, #red:checked ~ .red , #green:checked ~ .green {
+            display: inline-block;
+        }
+        .blue_button:hover, .red_button:hover, .green_button:hover{
+            border: solid;
+        }
+
+    </style>
+
+</head>
+<body>
+<div>
+
+    <label for="blue" class="blue_button">синие</label>
+    <input type="checkbox" class="color_button" id="blue">
+
+    <label for="red" class="red_button">красные</label>
+    <input type="checkbox" class="color_button" id="red">
+
+    <label for="green" class="green_button">зелёные</label>
+    <input type="checkbox" class="color_button" id="green">
+
+    <div class="blue">синий</div>
+    <div class="green">зелёный</div>
+    <div class="red">красный</div>
+    <div class="green">зелёный</div>
+    <div class="red">красный</div>
+    <div class="red">красный</div>
+    <div class="blue">синий</div>
+    <div class="green">зелёный</div>
+    <div class="blue">синий</div>
+    <div class="red">красный</div>
+    <div class="red">красный</div>
+    <div class="green">зелёный</div>
+    <div class="blue">синий</div>
+    <div class="red">красный</div>
+    <div class="blue">синий</div>
+
+</div>
+</body>
+</html>

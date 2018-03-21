@@ -1,0 +1,118 @@
+.global-header {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.global-nav{
+    max-width: 980px;
+    margin: 0 auto;
+    border: 1px solid red;
+
+}
+
+.global-nav__head{
+    display: none;
+}
+
+.global-nav__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.global-nav-list-item{
+    border: 1px solid yellow;
+}
+
+.global-nav__btn-cart {
+    color: #FFF;
+    background-color: transparent;
+    border: none;
+}
+.global-nav__btn-toggle {
+    background-color: transparent;
+    border: none;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+.burger {
+    position: relative;
+}
+.burger__bar{
+    background-color: #FFF;
+    height: 2px;
+    width: 100%;
+    display: block;
+    margin-bottom: 4px;
+
+}
+.global-nav__link {
+    color: #FFF;
+    display: flex;
+    padding: 0rem 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.icon{
+    display: block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 44px;
+    width: 20px;
+    background-position: center;
+}
+
+.icon-logo {
+    background-image: url("../assets/images/apple_image.svg");
+}
+
+.icon-cart {
+    background-image: url("../assets/images/cart_image.svg");
+}
+
+.icon-search{
+    background-image: url("../assets/images/search.svg");
+}
+
+@media screen and (max-width: 767.98px) {
+    .global-nav__head{
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+        position: relative;
+    }
+    .global-nav__content {
+        font-family: "SF Pro text", sans-serif;
+        padding: 44px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,1);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        transition: transform 0.5s;
+    }
+    .global-nav.opened .global-nav__content {
+        transform: translateY(-100%);
+    }
+    .global-nav_list-item{
+        border-bottom: 1px solid rgb(51,51,51);
+        width: 80%;
+    }
+    .global-nav_list-item:nth-child(7){
+        border-color: #FFF;
+    }
+    .global-nav__link{
+        color: #c7c8c7;
+        padding: 0.5rem 0;
+        font-weight: 400;
+    }
+    .global-nav__icon-link{
+        display: none;
+    }
+}

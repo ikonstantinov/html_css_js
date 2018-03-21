@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 20px;
+    background-color: #293340;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #374c61;
+}
+h3{
+    display: inline-block;
+}
+
+.header_title{
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.close_icon{
+    float: right;
+    padding: 15px 10px;
+    color: #bec5cd;
+}
+
+.close_icon:hover{
+    color: #64676d;
+}
+
+.colored{
+    color: #3dbb9a;
+}
+.modal_window{
+    margin-top: 50px;
+    margin-left: 50px;
+    background-color: #f9fafb;
+    border-radius: 7px;
+    width: 570px;
+    box-shadow: -15px 15px 1px #1a2129;
+    padding: 10px;
+
+}
+
+.modal_window__text{
+    height: 80px;
+    font-size: 0.75rem;
+    color: #455565;
+    padding-top: 1px;
+}
+
+.modal_window__button{
+    padding: 5px;
+    width: 120px;
+    height: 40px;
+    border-radius: 7px;
+    background-color: #bdc3c7;
+    color: #e8ebec;
+}
+
+.modal_window__button:hover{
+    background-color: #3dbb9a;
+    box-shadow: 0 1px 0 0 #339f83;
+}
+
+.bottom{
+    height: 70px;
+    background-color: #edf0f1;
+    text-align: right;
+    padding: 15px;
+    margin: -10px;
+    /*не знаю как было сделать чтобы border-radius не переопределять*/
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+
+
+}

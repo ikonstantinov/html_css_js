@@ -1,0 +1,45 @@
+@import'./variables.styl';
+$xsMobile = 575px;
+$mobile = 768px;
+$tablets = 992px;
+$laptops = 1200px;
+
+xs-mobile()
+	@media screen and (max-width: $xsMobile)
+		{block}
+
+xs-mobile-landscape()
+	@media screen and (max-width: $xsMobile) and (orientation: landscape)
+		{block}
+
+mobile()
+	@media screen and (min-width: $xsMobile+1) and (max-width: $mobile - 1)
+		{block}
+mobile-landscape()
+	@media screen and (min-width: $xsMobile+1) and (max-width: $mobile - 1) and (orientation: landscape)
+		{block}
+tablet()
+	@media screen and (min-width: $mobile) and (max-width: $tablets - 1)
+		{block}
+tablet-landscape()
+	@media screen and (min-width: $mobile) and (max-width: $tablets - 1) and (orientation: landscape)
+		{block}
+laptop()
+	@media screen and (min-width: $tablets) and (max-width: $laptops - 1)
+		{block}
+
+desktop()
+	@media screen and (min-width: $laptops)
+		{block}
+
+centerX()
+	left 50%;
+	transform translateX(-50%)
+
+centerY()
+	top 50%;
+	transform translateY(-50%)
+
+contentCenterMaxWidth()
+	max-width 980px
+	margin 0 auto

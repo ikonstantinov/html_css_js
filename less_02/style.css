@@ -1,0 +1,28 @@
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu__link {
+    background-color: azure;
+}
+
+.menu__link:active {
+    background-color: blue;
+}
+.menu__link:hover {
+    background-color: aqua;
+}
+.menu__link:focus {
+    background-color: orangered;
+}
+.menu__item {
+    background-color: aquamarine;
+    text-align: center;
+}
+.test {
+    border: solid red;
+}
+

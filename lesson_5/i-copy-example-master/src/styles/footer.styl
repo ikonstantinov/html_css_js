@@ -1,0 +1,29 @@
+$textColor=#555;
+.global-footer
+	background #f2f2f2
+	height 200px
+.footer
+	&-section
+		max-width $contentMaxWidth
+		margin 0 auto
+	&-legal
+		&_copyright
+			color #9b9b9b
+			font-size 0.8rem
+			padding-top 1rem
+		&_links
+			display flex
+			margin-top 1rem
+		&_link
+			font-size .9rem
+			color $textColor
+			margin-right 1rem
+			padding-right 1rem
+			border-right 1px solid #d6d6d6
+			&:last-child
+				border-right none
+			> a
+				color $textColor
+				text-decoration none
+				&:hover
+					text-decoration underline

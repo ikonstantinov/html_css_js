@@ -1,0 +1,132 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+
+}
+
+body, h1, h2, h3, h4, h5, ol, ul{
+    padding: 0;
+    margin: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body{
+    margin: 20px;
+    background-color: #e2e7ed;
+}
+
+.page-section{
+    position: relative;
+}
+
+.head-banner{
+    background-image: url("./assets/Layer5.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: calc(100vh - 3.58rem);
+}
+.head-banner__data{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.head-banner__title {
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+}
+.head-banner__sub-title{
+    padding-top: 40px;
+    font-size: 1.2rem;
+}
+.head-banner__search{
+    padding-top: 20px;
+    vertical-align: middle;
+    white-space: nowrap;
+    align-items: center;
+    position: relative;
+
+}
+.head-banner__search input#search{
+
+    width: 600px;
+    height: 50px;
+    background: #FFF;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: #63717f;
+    padding-left: 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.head-banner__search button.icon{
+    border: none;
+    background: #8d91ff;
+    height: 50px;
+    width: 50px;
+    color: #FFF;
+    /*opacity: 0;*/
+    font-size: 10pt;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.head-banner__search:hover button.icon:hover{
+    background: #6669c3;
+}
+
+.section1{
+    margin-top: 15px;
+    border: 1px solid red;
+    position: relative;
+}
+.section1__news__photo{
+    border: 1px solid green;
+    float: left;
+}
+.section1__news{
+    border: 1px solid green;
+    float: left;
+}
+.section1__new__text{
+    background-color: #FFF;
+    float: left;
+    width: 30%;
+    height: 100%;
+    padding: 40px;
+}
+
+.section1__photo{
+    border: 1px solid yellow;
+    float: right;
+}
+
+.section1__new__text-body{
+    padding-top: 15px;
+    color: #c7c7c7;
+}
+.section1__new__text-title{
+    position: relative;
+}
+.section1__new__text-title:after{
+    content: '';
+    border: 1px solid #ff1a21;
+    position: absolute;
+    width: 1.5rem;
+    top: calc(100% + 15px);
+    left: 0;
+}
